@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tushar Food Services | Quality Vegetarian Food Delivered</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width:1170px)" href="css/phone.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <style>
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+     
+        </div>
+        <ul>
+            <li class="item"><a href="#Home">Home</a></li>
+            <li class="item"><a href="#services">Services</a></li>
+            <li class="item"><a href="#client-section"> Our Clients</a></li>
+            <li class="item"><a href="#contact">Contact us</a></li>
+
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="primary" style="color: white; font-family: cursive;">
+            Welcome To Tushar Food Services
+        </h1>
+        <p style="font-size: 20px; text-align: center; color: white;">
+            Tushar Food Services brings you a delightful range of vegetarian dishes, made with fresh, high-quality ingredients. From traditional flavors to modern twists, we serve meals that cater to every taste, ensuring a satisfying and wholesome dining experience.  </p>
+        <button class="btn"><a href="https://www.linkedin.com/in/tushar-jain-ba89b41b1" style="color: white; text-decoration: none;">Order Now</a></button>
+    </section>
+    <section class="services">
+        <h1 class="primary">
+            Our Services
+        </h1>
+        <div id="services">
+            <div class="box">
+                <img src="img/pizaa.png" alt="pizaa">
+                <h2 class="secondary">Food Catering</h2>
+                <p class="center">Tushar Food Services specializes in exceptional vegetarian catering for events of all sizes, offering customized menus to suit your preferences. </p>
+
+            </div>
+            <div class="box">
+                <img src="img/burger.png" alt="pizaa">
+                <h2 class="secondary">Bulk Ordering</h2>
+                <p class="center">
+                    Tushar Food Services provides convenient bulk ordering for vegetarian catering.  </p>
+
+            </div>
+
+            <br>
+            <div class="box">
+                <img src="img/truck2.png" alt="pizaa">
+                <h2 class="secondary">Food Ordering</h2>
+                <p class="center">Tushar Food Services offers easy online food ordering for a variety of delicious vegetarian dishes. With a user-friendly platform, you can select your favorites, customize your meal, and enjoy prompt delivery, ensuring a delightful dining experience right at your doorstep.</p>
+
+            </div>
+
+        </div>
+    </section>
+    <section id="client-section">
+        <h1 class="primary">Our clients</h1>
+        <div id="clients">
+            <div class="client"></div>
+          <a href="https://www.apple.com/"><img src="img/apple.png" alt="applelogo"></a>  
+            <div id="clients">
+                <div class="client"></div>
+                <a href="https://www.hp.com/in-en/home.html"> <img src="img/hp.png" alt="hplogo"></a>
+                
+                <div id="clients">
+                    <div class="client"></div>
+                    <a href="https://www.microsoft.com/en-in/"><img src="img/microsoft.png" alt="microsoftlogo"></a>
+                    
+                    <div id="clients">
+                        <div class="client"></div>
+                       <a href="https://www.google.com/"><img src="img/skype.png" alt="skypelogo"></a> 
+                    </div>
+    </section>
+    <section id="contact">
+        <h1 class="primary">Contact Us</h1>
+        <div id="contactbox">
+            <form id="userForm">
+                <div class="form">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name" required>  
+                </div>
+                <div class="form">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email" required>  
+                </div>
+                <div class="form">
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" name="phone" id="phone" placeholder="Enter your phone number" required>  
+                </div>
+                <div class="form">
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message" placeholder="Enter your message" style="width: 100%; height: 50px;" required></textarea>
+                </div>
+                <div class="form">
+                    <div style="text-align: center;">
+                        <button type="submit" class="btn" style="text-align: center; background-color: green;">Submit</button>
+                    </div>
+                </div>
+            </form>
+        
+        </div>
+    </section>
+    <footer>
+        <div class="center">
+            Copyright &copy; All Rights Reserved
+        </div>
+    </footer>
+
+
+
+
+    <script>
+        document.getElementById("userForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevents the default form submission
+
+            // Assuming form data is valid, show success alert
+            Swal.fire({
+                icon: 'success',
+                title: 'Success',
+                text: 'Your Enquiry has been submitted.',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // You can add any redirection or form reset code here if needed
+                    document.getElementById("userForm").reset();
+                }
+            });
+        });
+    </script>
+
+
+
+</body>
+
+</html>

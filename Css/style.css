@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --navbar-height: 59px;
+}
+
+#logo {
+    margin: 34px 54px;
+}
+
+#navbar {
+    display: flex;
+    position: sticky;
+    align-items: center;
+    top: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    flex-wrap: wrap; /* Added to allow wrapping on smaller screens */
+}
+
+#navbar ul {
+    display: flex;
+    flex-wrap: wrap; /* Added to allow wrapping on smaller screens */
+}
+
+#navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a {
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover {
+    color: black;
+    background-color: white;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 380px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before {
+    content: "";
+    background: url('../break.jpg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+#home h1 {
+    color: black;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#services {
+    margin: 34px;
+    display: flex;
+    flex-wrap: wrap; /* Added for responsive design */
+}
+
+#services .box {
+    border: 2px solid brown;
+    padding: 34px;
+    margin: -27px 5px;
+    border-radius: 28px;
+    background: wheat;
+    flex: 1 1 calc(33% - 20px); /* Responsive width */
+}
+
+#services .box img {
+    height: 156px;
+    margin: auto;
+    display: block;
+}
+
+#client-section {
+    height: 230px;
+    position: relative;
+}
+
+#client-section::before {
+    content: "";
+    position: absolute;
+    background: url('../fancypizaa.jpg');
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Added for responsive design */
+}
+
+.client {
+    padding: 34px;
+}
+
+#contact {
+    position: relative;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('../rest.jpg');
+}
+
+#contactbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contactbox input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+
+#contactbox form {
+    width: 40%;
+}
+
+#contactbox label {
+    font-size: 1.3rem;
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+.primary {
+    font-size: 3.0rem;
+    padding: 12px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+.secondary {
+    font-size: 2.6rem;
+    padding: 12px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+.btn {
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: wheat;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    #navbar ul li a {
+        font-size: 1rem;
+        padding: 0 7px;
+        padding-bottom: 8px;
+    }
+
+    #home {
+        padding: 3px 20px; /* Adjusted padding for mobile */
+        height: auto; /* Allow height to adjust */
+    }
+
+    #home::before {
+        height: 300px; /* Adjust background height */
+    }
+
+    #home p {
+        font-size: 13px;
+    }
+
+    #services {
+        flex-direction: column;
+    }
+
+    #services .box {
+        padding: 14px;
+        margin: 10px 0;
+        border-radius: 28px;
+        background: silver;
+    }
+
+    #clients {
+        flex-wrap: wrap;
+    }
+
+    #clients img {
+        width: 66px;
+        padding: 2px 6px;
+        height: auto;
+    }
+
+    #contactbox form {
+        width: 80%;
+    }
+
+    .primary {
+        font-size: 26px;
+    }
+
+    .btn {
+        font-size: 13px;
+        padding: 4px 8px;
+    }
+}
