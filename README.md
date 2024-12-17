@@ -16,3 +16,7 @@ For inquiries or to place orders, please use the contact form on the website.
 ## Author
 
 - **Tushar Jain**
+
+## License
+
+This project is licensed under the MIT License.
